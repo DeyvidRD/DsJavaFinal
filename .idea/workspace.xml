@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="85130694-7a5a-4e6a-a58a-d340bea06f93" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Dao/ReservaDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Database/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Database/DatabaseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Database/DatabaseMySQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Database/DatabasePostgreeSQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Reserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFinal/JavaF/src/main/java/com/example/javaf/Model/Dao/ReservaDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFinal/JavaF/src/main/java/com/example/javaf/Model/Reserva.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFinal/JavaF/src/main/java/com/example/javaf/Model/ReservaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFinal/JavaFX_FinalNovo/src/main/java/com/example/javafx_finalnovo/Model/Dao/ReservaDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFinal/JavaFX_FinalNovo/src/main/java/com/example/javafx_finalnovo/Model/Reserva.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFinal/JavaFX_FinalNovo/src/main/java/com/example/javafx_finalnovo/Model/database/Database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFinal/JavaFX_FinalNovo/src/main/java/com/example/javafx_finalnovo/Model/database/DatabaseFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFinal/JavaFX_FinalNovo/src/main/java/com/example/javafx_finalnovo/Model/database/DatabaseMySQL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFinal/JavaFX_FinalNovo/src/main/java/com/example/javafx_finalnovo/Model/database/DatabasePostgreeSQL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/assets/adaptive-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/assets/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/assets/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/assets/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/screens/cadastros.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PAMProjetoFinal/screens/listagem.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2pJc82VyhV81UMu4JHymbYTLIP2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/DSJavaFinal/mysql-connector-j-8.3.0.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="85130694-7a5a-4e6a-a58a-d340bea06f93" name="Changes" comment="" />
+      <created>1732487456009</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732487456009</updated>
+    </task>
+    <servers />
+  </component>
+</project>
