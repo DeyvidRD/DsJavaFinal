@@ -143,9 +143,9 @@ public class HelloController {
 
         reservaDao.setConnection(connection);
         if (reservaDao.inserir(reserva)) {
-            aviso("Sucesso!", "Cadastro Realizado", "Reserva cadastrada com sucesso!");
-        } else {
             aviso("Erro!", "Erro ao cadastrar a Reserva", "A Reserva não foi Cadastrada!");
+        } else {
+            aviso("Sucesso!", "Cadastro Realizado", "Reserva cadastrada com sucesso!");
         }
 
         limparCampos();

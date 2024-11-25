@@ -1,3 +1,17 @@
+/*
+create database sistema_reservas;
+create table reservas (
+    id int auto_increment primary key,
+    numeroSala varchar(11) NOT NULL,
+    curso varchar(100) NOT NULL,
+    disciplina varchar(100) NOT NULL,
+    professor varchar(100) NOT NULL,
+    data date NOT NULL,
+    horarioEntrada time NOT NULL,
+    horarioSaida time NOT NULL,
+    informatica tinyint (1) NOT NULL,
+    turno varchar(5) NOT NULL);
+*/
 package com.example.dsjavafinal.Model.Database;
 
 import java.sql.Connection;
