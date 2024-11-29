@@ -51,10 +51,10 @@ public class HelloController {
     private Button btnDeletar;
 
     private Reserva reserva;
-    private ObservableList<Reserva> listReservas;
+    private ObservableList<Reserva> listReserva;
 
     @FXML
-    private TableView<Reserva> tbvReservas;
+    private TableView<Reserva> tbvReserva;
     @FXML
     private TableColumn<Reserva, Integer> tbcId;
     @FXML
@@ -78,8 +78,8 @@ public class HelloController {
 
     @FXML
     public void initialize() {
-        listReservas = FXCollections.observableArrayList();
-        tbvReservas.setItems(listReservas);
+        listReserva = FXCollections.observableArrayList();
+        tbvReserva.setItems(listReserva);
 
         tbcId.setCellValueFactory(new PropertyValueFactory<>("id"));
         tbcNumeroSala.setCellValueFactory(new PropertyValueFactory<>("numeroSala"));
@@ -117,7 +117,7 @@ public class HelloController {
             txtProfessor.requestFocus();
             return;
         }
-        if (txtData.getText().trim().isEmpty() || !txtData.getText().matches("\\d{4}-\\d{2}-\\d{2}")) {
+        if (txtData.getText().trim().isEmpty()) {
             campoVazio("O campo 'Data' está vazio ou inválido! Use o formato YYYY-MM-DD.");
             txtData.requestFocus();
             return;
@@ -134,18 +134,19 @@ public class HelloController {
         }
 
         String turno = rbManha.isSelected() ? "Manhã" : rbTarde.isSelected() ? "Tarde" : "Noite";
-        int id = listReservas.size() + 1;
 
+        int id = listReserva.size() + 1;
         reserva = new Reserva(id, txtNumeroSala.getText(), txtCurso.getText(), txtDisciplina.getText(),
                 txtProfessor.getText(), txtData.getText(), txtHrEntrada.getText(), txtHrSaida.getText(),
                 chkInformatica.isSelected(), turno);
-        listReservas.add(reserva);
+        listReserva.add(reserva);
 
         reservaDao.setConnection(connection);
         if (reservaDao.inserir(reserva)) {
-            aviso("Erro!", "Erro ao cadastrar a Reserva", "A Reserva não foi Cadastrada!");
-        } else {
             aviso("Sucesso!", "Cadastro Realizado", "Reserva cadastrada com sucesso!");
+            carregarDados();
+        } else {
+            aviso("Erro!", "Erro ao cadastrar a Reserva", "A Reserva não foi Cadastrada!");
         }
 
         limparCampos();
@@ -195,7 +196,7 @@ public class HelloController {
         if (reserva != null) {
             if (reservaDao.delete(idBuscar)) {
                 aviso("Deletar", "Deletar Reserva", "Reserva deletada com sucesso!");
-                carregarDados(); // Atualiza a tabela após exclusão
+                carregarDados();
             } else {
                 aviso("Erro", "Deletar Reserva", "Erro ao deletar a Reserva.");
             }
@@ -255,9 +256,9 @@ public class HelloController {
         alert.show();
     }
 
-    private void aviso(String tipo, String cabecalho, String mensagem) {
+    private void aviso(String titulo, String cabecalho, String mensagem) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(tipo);
+        alert.setTitle(titulo);
         alert.setHeaderText(cabecalho);
         alert.setContentText(mensagem);
         alert.show();
@@ -265,8 +266,7 @@ public class HelloController {
 
     private void carregarDados() {
         reservaDao.setConnection(connection);
-        listReservas.clear();
-        listReservas.addAll(reservaDao.getReservas());
-        tbvReservas.setItems(listReservas);
+        listReserva.clear();
+        listReserva.addAll(reservaDao.getReserva());
     }
 }

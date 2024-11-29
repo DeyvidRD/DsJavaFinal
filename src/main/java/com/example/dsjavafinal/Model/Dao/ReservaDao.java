@@ -1,7 +1,7 @@
 package com.example.dsjavafinal.Model.Dao;
 
 import com.example.dsjavafinal.Model.Reserva;
-import java.sql.Connection;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +13,13 @@ public class ReservaDao {
 
     public void setConnection(Connection connection) {
         this.connection = connection;
+        if (this.connection == null) {
+            Logger.getLogger(ReservaDao.class.getName()).log(Level.SEVERE, "Conexão com o banco está nula!");
+        }
     }
 
     public Boolean inserir(Reserva reserva) {
-        String sql = "INSERT INTO reservas(numeroSala, curso, disciplina, professor, data, hrEntrada, hrSaida, informatica, turno) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO reserva(numeroSala, curso, disciplina, professor, data, hrEntrada, hrSaida, informatica, turno) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, reserva.getNumeroSala());
             stmt.setString(2, reserva.getCurso());
@@ -28,15 +31,16 @@ public class ReservaDao {
             stmt.setBoolean(8, reserva.getInformatica());
             stmt.setString(9, reserva.getTurno());
             stmt.execute();
-            return false;
-        } catch (SQLException ex) {
-            Logger.getLogger(ReservaDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ReservaDao.class.getName()).log(Level.INFO, "Reserva inserida com sucesso!");
             return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(ReservaDao.class.getName()).log(Level.SEVERE,null,ex);
+            return false;
         }
     }
 
     public Reserva getReservaById(int id) {
-        String sql = "SELECT * FROM reservas WHERE id = ?";
+        String sql = "SELECT * FROM reserva WHERE id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
             ResultSet resultado = stmt.executeQuery();
@@ -56,26 +60,29 @@ public class ReservaDao {
                 );
             }
         } catch (SQLException ex) {
-            Logger.getLogger(ReservaDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ReservaDao.class.getName()).log(Level.SEVERE, "Erro ao buscar reserva por ID", ex);
         }
         return null;
     }
 
     public Boolean delete(int id) {
-        String sql = "DELETE FROM reservas WHERE id = ?";
+        String sql = "DELETE FROM reserva WHERE id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
             int affectedRows = stmt.executeUpdate();
-            return affectedRows > 0;
+            if (affectedRows > 0) {
+                Logger.getLogger(ReservaDao.class.getName()).log(Level.INFO, "Reserva com ID " + id + " deletada com sucesso!");
+                return true; // Sucesso na exclusão
+            }
         } catch (SQLException ex) {
-            Logger.getLogger(ReservaDao.class.getName()).log(Level.SEVERE, null, ex);
-            return false;
+            Logger.getLogger(ReservaDao.class.getName()).log(Level.SEVERE, "Erro ao deletar reserva", ex);
         }
+        return false; // Erro na exclusão
     }
 
-    public List<Reserva> getReservas() {
-        String sql = "SELECT * FROM reservas";
-        List<Reserva> listReservas = new ArrayList<>();
+    public List<Reserva> getReserva() {
+        String sql = "SELECT * FROM reserva";
+        List<Reserva> listReserva = new ArrayList<>();
         try (PreparedStatement stmt = connection.prepareStatement(sql);
              ResultSet resultado = stmt.executeQuery()) {
 
@@ -92,14 +99,14 @@ public class ReservaDao {
                         resultado.getBoolean("informatica"),
                         resultado.getString("turno")
                 );
-                listReservas.add(reserva);
+                listReserva.add(reserva);
             }
-
+            Logger.getLogger(ReservaDao.class.getName()).log(Level.INFO, "Lista de reservas carregada com sucesso!");
         } catch (SQLException ex) {
-            Logger.getLogger(ReservaDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ReservaDao.class.getName()).log(Level.SEVERE, "Erro ao buscar lista de reservas", ex);
         }
-        return listReservas;
+        return listReserva;
     }
+
+
 }
-
-

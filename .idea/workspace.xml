@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85130694-7a5a-4e6a-a58a-d340bea06f93" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Dao/ReservaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Dao/ReservaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Database/DatabaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Database/DatabaseFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Database/DatabaseMySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Database/DatabaseMySQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Database/DatabasePostgreeSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Database/DatabasePostgreSQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dsjavafinal/Model/Reserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dsjavafinal/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dsjavafinal/hello-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaFinal/JavaF/src/main/java/com/example/javaf/Model/Dao/ReservaDao.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaFinal/JavaF/src/main/java/com/example/javaf/Model/Reserva.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JavaFinal/JavaF/src/main/java/com/example/javaf/Model/ReservaController.java" beforeDir="false" />
@@ -37,6 +41,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

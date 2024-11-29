@@ -86,12 +86,7 @@ public class Reserva {
     }
 
     public void setData(String data) {
-
-        if (data.matches("\\d{4}-\\d{2}-\\d{2}")) {
-            this.data = data;
-        } else {
-            throw new IllegalArgumentException("Data inválida. Use o formato YYYY-MM-DD.");
-        }
+        this.data = data;
     }
 
     public String getHrEntrada() {
